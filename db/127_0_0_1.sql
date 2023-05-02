@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Апр 28 2023 г., 09:23
--- Версия сервера: 10.4.27-MariaDB
--- Версия PHP: 8.2.0
+-- Время создания: Май 02 2023 г., 09:22
+-- Версия сервера: 10.4.28-MariaDB
+-- Версия PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- База данных: `olga`
 --
+CREATE DATABASE IF NOT EXISTS `olga` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `olga`;
 
 -- --------------------------------------------------------
 
@@ -42,14 +44,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `login`, `password`, `fio`, `born`, `country`, `gender`) VALUES
-(1, 'Olga', '123', 'A B V', '2004-04-13', 'Таганрог ', 0),
-(4, 'edgvdv', '11235r45', 'Ольга Дмитриевна Усатова', '3004-04-13', 'Таганрог ', 0),
-(5, 'edgvdv', '11235r45', 'Ольга Дмитриевна Усатова', '0000-00-00', 'asfasf', 0),
-(6, 'edgvdv', '11235r45', 'Ольга Дмитриевна Усатова', '0000-00-00', 'ысыфсаыявс', 0),
-(7, 'edgvdv', '11235r45', 'Ольга Дмитриевна Усатова', '0000-00-00', '3535', 0),
-(8, 'superUser', '123', 'FIO', '1993-03-13', 'City', 0),
-(11, 'asd', '1', '', '0000-00-00', '', 1),
-(12, 'qwe', '1', '', '0000-00-00', '', 0);
+(1, 'qwe', '12345', 'Мирошниченко Алина Владимировна ', '2005-04-13', 'Таганрог', 0);
 
 --
 -- Индексы сохранённых таблиц
@@ -69,7 +64,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT для таблицы `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
